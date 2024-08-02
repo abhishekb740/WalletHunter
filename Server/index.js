@@ -5,7 +5,16 @@ const { config } = require('dotenv');
 config();
 
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin: [
+        "http://localhost:5173/",
+        "https://wallet-hunter-rosy.vercel.app/"
+    ],
+    methods: ["POST", "GET", "HEAD", "PUT", "DELETE", "PATCH"],
+    credentials: true,
+}
+));
 app.use(express.json());
 
 const connect = () => {
