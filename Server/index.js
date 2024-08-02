@@ -8,8 +8,8 @@ const app = express();
 app.use(cors(
   {
     origin: [
-        "http://localhost:5173/",
-        "https://wallet-hunter-rosy.vercel.app/"
+        "http://localhost:5173",
+        "https://wallet-hunter-rosy.vercel.app"
     ],
     methods: ["POST", "GET", "HEAD", "PUT", "DELETE", "PATCH"],
     credentials: true,
