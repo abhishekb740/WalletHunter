@@ -11,7 +11,7 @@ const EngagementRate: React.FC = () => {
   useEffect(() => {
     const fetchEngagementRate = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/engagement-rate');
+        const response = await fetch('https://wallethunter.onrender.com/api/engagement-rate');
         const data: EngagementRateResponse = await response.json();
         setMessagesPerDay(data.messagesPerDay);
       } catch (error) {

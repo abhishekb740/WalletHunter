@@ -12,7 +12,7 @@ const ActiveInactiveMembers: React.FC = () => {
   useEffect(() => {
     const fetchActiveInactiveMembers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/active-vs-inactive');
+        const response = await fetch('https://wallethunter.onrender.com/api/active-vs-inactive');
         const data: ActiveInactiveResponse = await response.json();
         setActiveMembers(data.activeMembers);
         setInactiveMembers(data.inactiveMembers);

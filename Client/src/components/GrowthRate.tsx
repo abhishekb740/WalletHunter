@@ -7,7 +7,7 @@ const GrowthRate: React.FC = () => {
   useEffect(() => {
     const fetchGrowthRate = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/growth-rate');
+        const response = await fetch('https://wallethunter.onrender.com/api/growth-rate');
         const data: GrowthRateResponse = await response.json();
         setGrowthRate(data.growthRate);
       } catch (error) {

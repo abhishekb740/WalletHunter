@@ -7,7 +7,7 @@ const TopContributors: React.FC = () => {
   useEffect(() => {
     const fetchTopContributors = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/top-contributors');
+        const response = await fetch('https://wallethunter.onrender.com/api/top-contributors');
         const data: TopContributorsResponse = await response.json();
         setTopContributors(data.topContributors);
       } catch (error) {

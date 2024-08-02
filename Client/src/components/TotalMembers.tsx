@@ -7,7 +7,7 @@ const TotalMembers: React.FC = () => {
   useEffect(() => {
     const fetchTotalMembers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/total-members');
+        const response = await fetch('https://wallethunter.onrender.com/api/total-members');
         const data: TotalMembersResponse = await response.json();
         setTotalMembers(data.totalMembers);
       } catch (error) {
